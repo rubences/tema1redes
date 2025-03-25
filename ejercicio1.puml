@@ -1,0 +1,30 @@
+@startuml
+skinparam monochrome true
+skinparam ranksep 20
+
+package "Modelo OSI" {
+    [Capa 7: Aplicación]
+    [Capa 6: Presentación]
+    [Capa 5: Sesión]
+    [Capa 4: Transporte]
+    [Capa 3: Red]
+    [Capa 2: Enlace de Datos]
+    [Capa 1: Física]
+}
+
+package "Modelo TCP/IP" {
+    [Capa de Aplicación]
+    [Capa de Transporte]
+    [Capa de Internet]
+    [Capa de Acceso a Red]
+}
+
+[Capa 7: Aplicación] --> [Capa de Aplicación] : Combina funciones de \nAplicación, Presentación y Sesión
+[Capa 6: Presentación] --> [Capa de Aplicación]
+[Capa 5: Sesión] --> [Capa de Aplicación]
+[Capa 4: Transporte] --> [Capa de Transporte] : Comunicación confiable \no no confiable (TCP/UDP)
+[Capa 3: Red] --> [Capa de Internet] : Ruteo de paquetes
+[Capa 2: Enlace de Datos] --> [Capa de Acceso a Red] : Acceso al medio físico
+[Capa 1: Física] --> [Capa de Acceso a Red]
+
+@enduml

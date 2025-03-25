@@ -1,0 +1,16 @@
+@startuml
+skinparam monochrome true
+skinparam ranksep 20
+
+title Función de la Capa de Transporte en OSI y TCP/IP
+
+package "Modelo OSI" {
+    [Capa de Transporte OSI] : \n- Comunicación confiable\n- Entrega sin errores\n- En secuencia y sin duplicaciones\n- Ejemplo: TCP
+}
+
+package "Modelo TCP/IP" {
+    [Capa de Transporte TCP/IP] : \n- Comunicación confiable (TCP)\n- Comunicación no confiable (UDP)\n- Transmisión de datos entre dispositivos
+}
+
+[Capa de Transporte OSI] --> [Capa de Transporte TCP/IP] : Diferencias\n- OSI: Solo conexión confiable\n- TCP/IP: Conexión confiable y no confiable
+@enduml
